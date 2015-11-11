@@ -4,11 +4,15 @@
   <meta charset="utf-8" />
   <meta name="author" content="Green Ido | @greenido | plus.google.com/+greenido">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>מערכת שעות לכיתה ד4</title>
+
   <link rel="manifest" href="manifest.json">
+
   <link rel="stylesheet" href="css/foundation.css" />
   <script src="js/vendor/modernizr.js"></script>
 </head>
+<<<<<<< HEAD
 
   <style>
   ul {
@@ -27,19 +31,143 @@
     border-radius: 0.5em;
   }
 </style>
+||||||| merged common ancestors
+=======
+
+  <style>
+  ul {
+    margin-right: 2em;
+  }
+  dl {
+    background: rgba(169, 132, 132, 0.87);
+  }
+  dd {
+    background: rgba(169, 132, 132, 0.87);
+    padding: 0.5em;
+  }
+  h2 {
+    background: rgba(169, 132, 132, 0.67);
+    padding-bottom: 0.1em;
+    border-radius: 0.5em;
+  }
+  #for-week {
+    width: 50%;
+    background: gold;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 70%;
+  }
+</style>
+>>>>>>> with-firebase
 <body>
   <div class="row" >
     <div data-magellan-expedition="fixed" >
       <div class="large-12 columns">
+<<<<<<< HEAD
         <center>
           <h2>
             מערכת שעות
             <br>כיתה ד4 - 2015/2016</h2>
         </center>
+||||||| merged common ancestors
+        <h3>מערכת שעות לכיתה ד4</h3>
+        <span id='date'></span>
+=======
+        <center>
+          <h2>
+            מערכת שעות
+            <br>
+            כיתה ד4
+            <div id="for-week">
+              <img src="img/ajax-loader-t.gif" alt="loading...">
+            </div>
+          </h2>
+        </center>
+>>>>>>> with-firebase
       </div>
+<<<<<<< HEAD
+    </div>
+  </div>
+||||||| merged common ancestors
+  
+      <dl class="sub-nav">
+       
+        <dd data-magellan-arrival="notes">
+          <a href="#notes">הודעות</a>
+        </dd>
+        <dd data-magellan-arrival="e">
+          <a href="#e">חמישי</a>
+        </dd>
+        <dd data-magellan-arrival="d">
+          <a href="#d">רביעי</a>
+        </dd>
+        <dd data-magellan-arrival="c">
+          <a href="#c">שלישי</a>
+        </dd>
+        <dd data-magellan-arrival="b">
+          <a href="#b">שני</a>
+        </dd>
+
+         <dd data-magellan-arrival="a">
+          <a href="#a">ראשון</a>
+        </dd>
+        
+      </dl>
+    </div>
+  </div>
+=======
     </div>
   </div>
 
+  <div class="row" dir='rtl'>
+    <div class="large-12 small-12 columns large-centered">
+      <dl class="accordion" data-accordion>
+        <dd class="accordion-navigation"></dd>
+        <dd class="accordion-navigation">
+          <a href="#day0">
+            <h3>יום ראשון</h3>
+          </a>
+          <div id="day0" class="content active "></div>
+        </dd>
+        <dd class="accordion-navigation">
+          <a href="#day1">
+            <h3>יום שני</h3>
+          </a>
+          <div id="day1" class=" content active "></div>
+        </dd>
+
+        <dd class="accordion-navigation">
+          <a href="#day2">
+            <h3>יום שלישי</h3>
+          </a>
+          <div id="day2" class="content active"></div>
+        </dd>
+
+        <dd class="accordion-navigation">
+          <a href="#day3">
+            <h3>יום רביעי</h3>
+          </a>
+          <div id="day3" class="content active"></div>
+        </dd>
+
+        <dd class="accordion-navigation">
+          <a href="#day4">
+            <h3>יום חמישי</h3>
+          </a>
+          <div id="day4" class="content active"></div>
+        </dd>
+
+        <dd class="accordion-navigation" id="msgs-headers">
+          <a href="#day5">
+            <h3>הודעות</h3>
+          </a>
+          <div id="day5" class="content active"></div>
+        </dd>
+      </dl>
+>>>>>>> with-firebase
+
+<<<<<<< HEAD
   <div class="row" dir='rtl'>
     <div class="large-12 small-12 columns large-centered">
       <dl class="accordion" data-accordion>
@@ -58,7 +186,62 @@
               <li>אנגלית</li>
               <li>מולדת וחברה</li>
             </ol>
+||||||| merged common ancestors
+ 
+
+  <div class="row">
+    <div class="large-12columns">
+      <div class="row">
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="a"></a>
+            <h2 data-magellan-destination="a">יום ראשון</h2>
+              <ol>
+               <li>תנ"ך</li>
+                <li>כשורי חיים</li>
+                <li>מתמטיקה</li>
+                <li>מולדת וחברה</li>
+                <li>גיאוגרפיה</li>
+                <li>אנגלית</li>
+                <li>מולדת וחברה</li>
+              </ol>
+=======
+      <br>
+      <a id="loginBut" href="#" data-reveal-id="loginDialog" class="radius button">Login</a>
+      <div id="loginDialog" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+        <div class="large-3 large-centered columns">
+          <div class="login-box">
+            <div class="row">
+              <div class="large-12 columns">
+
+                <div class="row">
+                  <div class="large-12 columns">
+                    <input id="emailF" type="text" name="username" placeholder="מייל" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-12 columns">
+                    <input id="passF" type="password" name="password" placeholder="סיסמה" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-12 columns">
+                    <input id="week-of" title="עדכון לשבוע של..." type="text" name="week-of" placeholder="11.11-17.11" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-12 large-centered columns">
+                    <input id="login-action" class="button expand" value="כניסה"/>
+                  </div>
+                </div>
+                <div class"row">
+                  <div id="status" class="large-12 large-centered columns"></div>
+                </div>
+              </div>
+            </div>
+>>>>>>> with-firebase
           </div>
+<<<<<<< HEAD
         </dd>
         <dd class="accordion-navigation">
           <a href="#panel2b">
@@ -76,7 +259,57 @@
             </ol>
           </div>
         </dd>
+||||||| merged common ancestors
+        </div>
 
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="b"></a>
+            <h2 data-magellan-destination="b">יום שני</h2>
+            <ol>
+              <li>תנ"ך</li>
+              <li>ספורט</li>
+              <li>מתמטיקה</li>
+              <li>גיאומטריה</li>
+              <li>שילוב המחשב בהוראת העברית/ אקולוגיה</li>
+              <li>שילוב המחשב בהוראת העברית/ אקולוגיה</li>
+              <li>מדעים</li>
+
+            </ol>
+
+          </div>
+        </div>
+=======
+        </div>
+        <a id="close-login" class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.accordion.js"></script>
+  <script src="js/foundation/foundation.magellan.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+  <script>
+    $(document).foundation();
+   
+    //
+    //
+    //
+    function putContentEditable() {
+      
+      $( ".content" ).each(function( index ) {
+        console.log( index ); //+ ": " + $( this ).text() );
+        $(this).attr('contenteditable','true');
+        $(this).focusout(function() {
+          var newHTML = $( this ).html();
+          var dayStr = "day-" + index;
+          console.log("finish to update day: " + index + "  New text: " +  newHTML);
+>>>>>>> with-firebase
+
+<<<<<<< HEAD
         <dd class="accordion-navigation">
           <a href="#panel3b">
             <h3>יום שלישי</h3>
@@ -93,7 +326,76 @@
             </ol>
           </div>
         </dd>
+||||||| merged common ancestors
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="c"></a>
+            <h2 data-magellan-destination="c">יום שלישי</h2>
+            <ol>
+             <li>תנ"ך</li>
+              <li>מתמטיקה </li>
+              <li>מתמטיקה</li>
+              <li>מדעים</li>
+              <li>שפה</li>
+              <li>שפה</li>
+              <li>שפה</li>
+              <li></li>
+            </ol>
+          </div>
+        </div>
 
+      </div>
+
+      <div class="row ">
+=======
+          var ref = new Firebase("https://school-time.firebaseio.com/");
+          ref.onAuth(function() {
+            var refDay = ref.child(index);
+            refDay.set({
+              day: {
+                val: newHTML
+              }
+            });
+          });
+        });
+      });
+    }
+
+    //
+    function saveDate(weekStr) {
+      console.log("Save it to FB. weekStr: " + weekStr);
+      var ref = new Firebase("https://school-time.firebaseio.com/weekOf");
+      ref.onAuth(function() {
+        ref.set({
+          updateFor: weekStr
+        });
+      });
+    }
+
+    //
+    //
+    //
+    function loginToFireBase(emailStr, passwordStr) {
+      var ref = new Firebase("https://school-time.firebaseio.com/");
+      ref.authWithPassword({
+        email    : emailStr,
+        password : passwordStr
+      }, function(error, authData) {
+        if (error) {
+          console.log("****** Login Failed!", error);
+          $("#status").html("הכניסה נכשלה - נסי שוב");
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+          $("#close-login").click();
+          var weekStr = $("#week-of").val();
+          putContentEditable();
+          saveDate( weekStr );
+        }
+      });
+    }
+>>>>>>> with-firebase
+
+<<<<<<< HEAD
         <dd class="accordion-navigation">
           <a href="#panel4b">
             <h3>יום רביעי</h3>
@@ -108,7 +410,50 @@
             </ol>
           </div>
         </dd>
+||||||| merged common ancestors
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="d"></a>
+            <h2 data-magellan-destination="d">יום רביעי</h2>
+            <ol>
+              <li>אנגלית</li>
+              <li>מדעים</li>
+              <li>ספורט</li>
+              <li>אנגלית</li>
+              <li>אנגלית</li>
 
+            </ol>
+          </div>
+        </div>
+=======
+    //
+    //
+    //
+    function readTimes() {
+      var ref = new Firebase("https://school-time.firebaseio.com/");
+      ref.on("value", function(snapshot) {
+        //console.log("The schedule: " + JSON.stringify(snapshot.val()));
+        snapshot.forEach(function(childSnapshot) {
+          var key = childSnapshot.key();
+          var dayData = childSnapshot.val();
+          if (key > -1 && key < 6) {
+            console.log("key: "+key + " val: " + dayData.day.val);
+            $("#day" + key).html(dayData.day.val);
+          }
+          else {
+            if (key == "weekOf") {
+              console.log("updated for week: " + dayData.updateFor);
+              $("#for-week").html(dayData.updateFor);
+            }
+            else {
+            console.log("Err: got some other key from FB. Key: "+ key + " data: "+dayData);
+          }
+          }
+
+        });
+>>>>>>> with-firebase
+
+<<<<<<< HEAD
         <dd class="accordion-navigation">
           <a href="#panel5b">
             <h3>יום חמישי</h3>
@@ -124,7 +469,29 @@
             </ol>
           </div>
         </dd>
+||||||| merged common ancestors
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="e"></a>
+            <h2 data-magellan-destination="e">יום חמישי</h2>
+            <ol>
+              <li>שפה</li>
+              <li>שפה</li>
+              <li>קמפוסים</li>
+              <li>מפתח הל"ב</li>
+              <li>מתמטיקה </li>
+              <li>חיים בחברה התמודדות עם דילמות חברתיות.</li>
+            </ol>
+          </div>
+        </div>
+=======
+      }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+      });
+    }
+>>>>>>> with-firebase
 
+<<<<<<< HEAD
         <dd class="accordion-navigation">
           <a href="#panel6b" id="msgs-headers">
             <h3>הודעות</h3>
@@ -143,16 +510,58 @@
           </div>
         </dd>
       </dl>
+||||||| merged common ancestors
+        <div class="large-4 columns">
+          <div class="callout panel">
+            <a name="notes"></a>
+            <h2 data-magellan-destination="notes" id="notes">הודעות</h2>
+            <p>
+              <h5>הורים ותלמידים יקרים, להלן מס' הודעות:</h5>
+                              יש להביא את החוברות הבאות:
+              <ul>
+                <li> מספרים בתחום המיליון. </li>
+                <li> גאומטריה. </li>
+              </ul>
+              כמו כן, שתי מחברות ( משבצות) וקלסר עם גומייה למען דפי העבודה שיחולקו. 
+              
+              <h4>שבוע טוב!</h4>
+            </p>
+          </div>
+        </div>
+=======
+    //
+    // Start the party
+    //
+    $().ready(function() {
+      readTimes();
+>>>>>>> with-firebase
 
+<<<<<<< HEAD
     </div>
   </div>
+||||||| merged common ancestors
+      </div>
+      <hr />
+    </div>
+  </div>
+=======
+      $("#emailF").focus(function() {
+        $("#status").html("");
+      });
+>>>>>>> with-firebase
 
+<<<<<<< HEAD
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/foundation/foundation.accordion.js"></script>
   <script src="js/foundation/foundation.magellan.js"></script>
   <script>
     $(document).foundation();
+
+    // TODO
+    // 1. Bind the data on the page with firebase
+    // 2. Allow easy sharing
+
     function putContentEditable() {
       $( ".content" ).each(function( index ) {
         console.log( index + ": " + $( this ).text() );
@@ -167,13 +576,40 @@
         putContentEditable();
       }
     });
+||||||| merged common ancestors
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.magellan.js"></script>
+  <script>$(document).foundation();</script>
+=======
+      $("#login-action").click(function() {
+         loginToFireBase($("#emailF").val(), $("#passF").val());         
+      });
 
+      // var clicksOnMsgs = 0;
+      // $("#msgs-headers").click(function() {
+      //   clicksOnMsgs++;
+      //   if (clicksOnMsgs > 0) {
+      //     clicksOnMsgs = -99;   
+      //   }
+      // });
+    });
+    
+</script>
+>>>>>>> with-firebase
+
+<<<<<<< HEAD
   </script>
 
 
  <!-- offline support!
+||||||| merged common ancestors
+  <!-- offline support! -->
+=======
+  <!-- offline support!
+>>>>>>> with-firebase
   <script src="upup.min.js"></script>
-  <script>
+<script>
     UpUp.start({
       'content-url': 'index-accordion.html',
       'assets': ['css/foundation.css', 
@@ -181,10 +617,20 @@
         'js/foundation/foundation.magellan.js' ]
     });
   </script>
+<<<<<<< HEAD
    -->
 
   <!-- Google Analytics -->
   <script>
+||||||| merged common ancestors
+
+  <!-- Google Analytics -->
+  <script>
+=======
+-->
+<!-- Google Analytics -->
+<script>
+>>>>>>> with-firebase
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -193,6 +639,12 @@
       ga('require', 'displayfeatures');
       ga('send', 'pageview');
   </script>
+<<<<<<< HEAD
   <!-- v0.5 -->
+||||||| merged common ancestors
+
+=======
+<!-- v0.5 -->
+>>>>>>> with-firebase
 </body>
 </html>
