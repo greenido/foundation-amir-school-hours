@@ -26,9 +26,18 @@
   }
   h2 {
     background: rgba(169, 132, 132, 0.67);
-    padding-bottom: 0.5em;
+    padding-bottom: 0.1em;
     border-radius: 0.5em;
   }
+  #for-week {
+    
+    width: 50%;
+    background: gold;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+  }
+
 </style>
 <body>
   <div class="row" >
@@ -37,7 +46,9 @@
         <center>
           <h2>
             מערכת שעות
-            <br>כיתה ד4 - 2015/2016</h2>
+            <br>כיתה ד4
+            <input id="for-week" type="text" placeholder="11.11-11.17" > 
+          </h2>
         </center>
       </div>
     </div>
@@ -101,6 +112,46 @@
         </dd>
       </dl>
 
+      <br>
+      <a id="loginBut" href="#" data-reveal-id="loginDialog" class="radius button">Login</a>
+      <div id="loginDialog" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+        <div class="large-3 large-centered columns">
+          <div class="login-box">
+          <div class="row">
+          <div class="large-12 columns">
+            
+               <div class="row">
+                 <div class="large-12 columns">
+                     <input id="emailF" type="text" name="username" placeholder="Username" />
+                 </div>
+               </div>
+              <div class="row">
+                 <div class="large-12 columns">
+                     <input id="passF" type="password" name="password" placeholder="Password" />
+                 </div>
+              </div>
+              <div class="row">
+                 <div class="large-12 columns">
+                     <input id="week-of" title="עדכון לשבוע של..." type="text" name="week-of" placeholder="11.11-17.11" />
+                 </div>
+              </div>
+              <div class="row">
+                <div class="large-12 large-centered columns">
+                  <input id="login-action" class="button expand" value="Log In"/>
+                </div>
+              </div>
+              <div class"row">
+                <div id="status" class="large-12 large-centered columns">
+                  
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <a id="close-login" class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+
     </div>
   </div>
 
@@ -117,6 +168,7 @@
     //
     //
     function putContentEditable() {
+      
       $( ".content" ).each(function( index ) {
         console.log( index ); //+ ": " + $( this ).text() );
         $(this).attr('contenteditable','true');
@@ -134,25 +186,32 @@
               }
             });
           });
-
         });
-
       });
+    }
+
+    //
+    function saveDate(weekStr) {
+      console.log("TOTO: save it to FB");
     }
 
     //
     //
     //
-    function loginToFireBase() {
+    function loginToFireBase(emailStr, passwordStr) {
       var ref = new Firebase("https://school-time.firebaseio.com/");
       ref.authWithPassword({
-        email    : "greenido@yahoo.com",
-        password : "yoyo!!"
+        email    : emailStr,
+        password : passwordStr
       }, function(error, authData) {
         if (error) {
           console.log("****** Login Failed!", error);
+          $("#status").html("הכניסה נכשלה - נסי שוב");
         } else {
           console.log("Authenticated successfully with payload:", authData);
+          $("#close-login").click();
+          putContentEditable();
+          saveDate();
         }
       });
     }
@@ -175,21 +234,28 @@
         console.log("The read failed: " + errorObject.code);
       });
     }
+
     //
     // Start the party
     //
     $().ready(function() {
       readTimes();
 
-      var clicksOnMsgs = 0;
-      $("#msgs-headers").click(function() {
-        clicksOnMsgs++;
-        if (clicksOnMsgs > 0) {
-          clicksOnMsgs = -99;
-          putContentEditable();
-          loginToFireBase();
-        }
+      $("#emailF").focus(function() {
+        $("#status").html("");
       });
+
+      $("#login-action").click(function() {
+         loginToFireBase($("#emailF").val(), $("#passF").val());         
+      });
+
+      // var clicksOnMsgs = 0;
+      // $("#msgs-headers").click(function() {
+      //   clicksOnMsgs++;
+      //   if (clicksOnMsgs > 0) {
+      //     clicksOnMsgs = -99;   
+      //   }
+      // });
     });
     
 </script>
