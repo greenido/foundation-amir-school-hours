@@ -163,7 +163,7 @@
         $(this).focusout(function() {
           var newHTML = $( this ).html();
           var dayStr = "day-" + index;
-          console.log("finish to update day: " + index + "  New text: " +  newHTML);
+          //console.log("finish to update day: " + index + "  New text: " +  newHTML);
 
           var ref = new Firebase("https://school-time.firebaseio.com/");
           ref.onAuth(function() {
@@ -180,7 +180,7 @@
 
     //
     function saveDate(weekStr) {
-      console.log("Save it to FB. weekStr: " + weekStr);
+      //console.log("Save it to FB. weekStr: " + weekStr);
       var ref = new Firebase("https://school-time.firebaseio.com/weekOf");
       ref.onAuth(function() {
         ref.set({
@@ -222,12 +222,12 @@
           var key = childSnapshot.key();
           var dayData = childSnapshot.val();
           if (key > -1 && key < 6) {
-            console.log("key: "+key + " val: " + dayData.day.val);
+            //console.log("key: "+key + " val: " + dayData.day.val);
             $("#day" + key).html(dayData.day.val);
           }
           else {
             if (key == "weekOf") {
-              console.log("updated for week: " + dayData.updateFor);
+              //console.log("updated for week: " + dayData.updateFor);
               $("#for-week").html(dayData.updateFor);
             }
             else {
@@ -282,6 +282,6 @@
       ga('require', 'displayfeatures');
       ga('send', 'pageview');
   </script>
-<!-- v0.85 -->
+<!-- v0.88 -->
 </body>
 </html>
